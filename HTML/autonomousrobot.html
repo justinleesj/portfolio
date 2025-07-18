@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<!-- Justin Lee Portfolio -->
+ <!-- Created on 07/11/2025 -->
+
+<html>
+	<head>
+		<title>Autonomous Hockey Robot - Justin Lee</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Home Page</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">My Projects</a></li>
+							<li><a href="aboutme.html">About Me</a></li>
+							<li><a href="resume.html">Resume</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/justinlee1221" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									  <img src="images/autonomousr-Picsart-AiImageEnhancer.png" alt="AutonomousRobot" width="350">
+								</header>
+                                <p>For our final mechatronics project, my team and I engineered an autonomous hockey robot designed to locate a puck, capture it, and score on a designated goal. Our chassis design was built off a chassis design in a previous lab. Here, we added wheel shields to prevent stalls during collisions and developed a 3‑D printed bracket that funnels the puck toward the robot’s centerline. Iterative prototyping narrowed the bracket gap from 12 cm to 9 cm, improving puck retention while satisfying strict size constraints. The final bracket incorporated curved edges for wall‑gliding and slotted mounts for quick swap‑outs during testing.</p>
+								<p>Electrically, the platform combined a Pixy2 camera (color‑trained for orange pucks and green goals), a PING ultrasonic sensor for puck‑in‑bracket confirmation, a ZigBee module for real‑time field coordinates, and a BNO055 IMU to escape if the bot became wall‑pinned. These sensors fed a finite‑state machine—START, SWEEP, CHASE, GSweep, DRIVE, END—that balanced reliability over raw speed: the robot first centered on the puck, advanced under PID control, verified possession, and then executed a direction‑aware search before driving the puck home.</p>
+                                <center><img src="images/orderofops.png" alt="AutonomousRobot" width="650"></center>
+								<p>During validation, two issues emerged: the puck’s low friction caused drop‑outs in tight turns, and the bot could wedge against arena walls. We mitigated both by lowering turning speed and programming a short IMU‑triggered burst to bounce the puck free. After these refinements the robot consistently cleared all course demonstrations, ultimately performing as expected in the JHockey tournament (an autonomous hockey tournament against other student-teams from the course)—successfully locating, capturing, and scoring despite power‑related setbacks in later rounds. The project honed my end‑to‑end design skills: rapid CAD iteration, sensor fusion in embedded C++, and data‑driven troubleshooting—experience I now leverage in larger electromechanical systems.</p>
+                            </section>
+                            
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>Torrance, CA 90501</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a>(310) 634-6759</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a>1221sjlee@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+								<li><a href="https://www.linkedin.com/in/justinlee1221" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>								</ul>
+							</section>
+						</section>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
